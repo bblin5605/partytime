@@ -1,0 +1,42 @@
+{
+  "name": "partytime",
+  "private": true,
+  "version": "0.0.0",
+<<<<<<< HEAD
+=======
+  "homepage": "https://bblin5605.github.io/partytime",
+>>>>>>> d96a1e1 (add homepage)
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+<<<<<<< HEAD
+    "preview": "vite preview"
+=======
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+>>>>>>> d96a1e1 (add homepage)
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+<<<<<<< HEAD
+=======
+    "gh-pages": "^6.3.0",
+>>>>>>> d96a1e1 (add homepage)
+    "globals": "^15.15.0",
+    "vite": "^6.2.0"
+  }
+}

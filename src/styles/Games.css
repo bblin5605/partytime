@@ -1,0 +1,532 @@
+.game-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.game-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.game-instruction {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.game-info {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.score-display,
+.level-display {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2d3436;
+}
+
+/* 比長短遊戲特定樣式 */
+.compare-game {
+  background-color: #fff5f5;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255, 107, 107, 0.1);
+  padding: 2rem;
+  max-width: 2000px;
+  margin: 2rem auto;
+}
+
+.game-subtitle {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.game-start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.game-stage {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  padding: 3rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card {
+  perspective: 1000px;
+  height: 240px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.flip-card-front {
+  background-color: #fff;
+  border: 2px solid #ff6b6b;
+  color: #ff6b6b;
+}
+
+.flip-card-back {
+  background-color: #fff;
+  border: 2px solid #ff6b6b;
+  transform: rotateY(180deg);
+}
+
+.card-question {
+  font-size: 3rem;
+  color: #ff6b6b;
+  animation: bounce 1s infinite;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+}
+
+.card-name {
+  font-size: 1.5rem;
+  color: #ff6b6b;
+}
+
+.result-message {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  color: #ff6b6b;
+  margin: 2rem auto;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+}
+
+.selected-items {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.result-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  border: 3px solid #ff9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  min-width: 150px;
+  transition: all 0.3s ease;
+}
+
+.result-card.winner {
+  border-color: #ffd700;
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+}
+
+.winner-crown {
+  font-size: 2rem;
+  animation: float 2s ease-in-out infinite;
+}
+
+.start-button {
+  font-size: 1.5rem;
+  padding: 1.2rem 2.5rem;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* 響應式設計 */
+@media (max-width: 1200px) {
+  .compare-game {
+    max-width: 1000px;
+    margin: 1.5rem;
+  }
+
+  .card-grid {
+    gap: 2.5rem;
+    padding: 2.5rem;
+  }
+
+  .flip-card {
+    height: 220px;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .direction-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 900px;
+  }
+
+  .item-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 900px;
+    gap: 3rem;
+    padding: 3rem;
+  }
+
+  .card-grid {
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .flip-card {
+    height: 200px;
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .direction-grid,
+  .item-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .flip-card {
+    height: 180px;
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .direction-grid,
+  .item-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 320px;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .flip-card {
+    height: 160px;
+    max-width: 140px;
+  }
+
+  .card-question {
+    font-size: 2rem;
+  }
+
+  .card-icon {
+    font-size: 2rem;
+  }
+
+  .card-name {
+    font-size: 1.2rem;
+  }
+
+  .result-message {
+    font-size: 1.2rem;
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* 數字炸彈遊戲特定樣式 */
+.bomb-game {
+  background-color: #fff5f5;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255, 107, 107, 0.1);
+  padding: 2rem;
+}
+
+.game-status {
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.status-text {
+  font-size: 1.5rem;
+  color: #ff6b6b;
+  margin-bottom: 1rem;
+  animation: bounce 1s infinite;
+}
+
+.game-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  color: #4a4a4a;
+}
+
+.stat-icon {
+  font-size: 1.5rem;
+}
+
+.bomb-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.bomb-cell {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #fff;
+  border: 2px solid #ff6b6b;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #2d3436;
+  width: 100%;
+  min-width: 0;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.bomb-cell:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2);
+  background-color: #fff0f0;
+  z-index: 1;
+}
+
+.bomb-cell:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.bomb-cell.bomb {
+  background-color: #ff6b6b;
+  color: white;
+  animation: shake 0.5s ease-in-out;
+  font-size: 1.5rem;
+}
+
+.bomb-cell.safe {
+  background-color: #51cf66;
+  color: white;
+  animation: pop 0.3s ease-out;
+  font-size: 1.5rem;
+}
+
+.restart-button {
+  background-color: #ffd43b;
+  color: #4a4a4a;
+}
+
+.restart-button:hover {
+  background-color: #fcc419;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* 共用按鈕樣式 */
+.game-button {
+  background-color: #495057;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin: 1rem;
+}
+
+.game-button:hover {
+  background-color: #343a40;
+  transform: translateY(-2px);
+}
+
+.home-button {
+  background-color: #6c757d;
+}
+
+.home-button:hover {
+  background-color: #495057;
+}
+
+/* 結果訊息樣式 */
+.result-message.success {
+  background-color: #51cf66;
+  color: white;
+}
+
+.result-message.failure {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.game-controls {
+  margin-top: 2rem;
+}
+
+.direction-grid {
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1400px;
+  gap: 4rem;
+  padding: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-grid {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1200px;
+  gap: 4rem;
+  padding: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.selected-cards {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  padding: 2rem;
+}
+
+.selected-cards .flip-card {
+  width: 240px;
+  height: 240px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .selected-cards {
+    gap: 3rem;
+  }
+
+  .selected-cards .flip-card {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .selected-cards {
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .selected-cards .flip-card {
+    width: 160px;
+    height: 160px;
+  }
+} 
