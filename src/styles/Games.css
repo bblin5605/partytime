@@ -68,8 +68,8 @@
 .card-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 3rem;
-  padding: 3rem;
+  gap: 1.5rem;
+  padding: 1.5rem;
   max-width: 1200px;
   margin: 2rem auto;
   background-color: #fff;
@@ -81,10 +81,10 @@
 
 .flip-card {
   perspective: 1000px;
-  height: 240px;
+  height: 210px;
+  width: 150px;
+  max-width: 150px;
   cursor: pointer;
-  width: 100%;
-  max-width: 220px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -135,17 +135,17 @@
 }
 
 .card-question {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #ff6b6b;
   animation: bounce 1s infinite;
 }
 
 .card-icon {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .card-name {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #ff6b6b;
 }
 
@@ -213,14 +213,10 @@
     margin: 1.5rem;
   }
 
-  .card-grid {
-    gap: 2.5rem;
-    padding: 2.5rem;
-  }
-
   .flip-card {
-    height: 220px;
-    max-width: 200px;
+    height: 196px;
+    width: 140px;
+    max-width: 140px;
   }
 }
 
@@ -237,14 +233,10 @@
     padding: 3rem;
   }
 
-  .card-grid {
-    gap: 2rem;
-    padding: 2rem;
-  }
-
   .flip-card {
-    height: 200px;
-    max-width: 180px;
+    height: 182px;
+    width: 130px;
+    max-width: 130px;
   }
 }
 
@@ -252,14 +244,13 @@
   .direction-grid,
   .item-grid {
     grid-template-columns: repeat(2, 1fr);
-    max-width: 600px;
-    gap: 2rem;
-    padding: 2rem;
+    max-width: 500px;
   }
 
   .flip-card {
-    height: 180px;
-    max-width: 160px;
+    height: 168px;
+    width: 120px;
+    max-width: 120px;
   }
 }
 
@@ -267,14 +258,14 @@
   .direction-grid,
   .item-grid {
     grid-template-columns: repeat(2, 1fr);
-    max-width: 320px;
     gap: 1rem;
-    padding: 1rem;
+    max-width: 280px;
   }
 
   .flip-card {
-    height: 160px;
-    max-width: 140px;
+    height: 140px;
+    width: 100px;
+    max-width: 100px;
   }
 
   .card-question {
@@ -503,8 +494,9 @@
 }
 
 .selected-cards .flip-card {
-  width: 240px;
-  height: 240px;
+  height: 210px;
+  width: 150px;
+  max-width: 150px;
   margin: 0;
 }
 
@@ -514,8 +506,9 @@
   }
 
   .selected-cards .flip-card {
-    width: 200px;
-    height: 200px;
+    height: 182px;
+    width: 130px;
+    max-width: 130px;
   }
 }
 
@@ -526,7 +519,8 @@
   }
 
   .selected-cards .flip-card {
-    width: 160px;
-    height: 160px;
+    height: 168px;
+    width: 120px;
+    max-width: 120px;
   }
 } 
